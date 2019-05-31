@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <script type="text/javascript">
+
+      setInterval(myClock, 1000); //ставим выполнение данной функции каждую секунду
+      setInterval(nine, 1000); //ставим выполнение данной функции каждую секунду
+      function myClock() {
+
+        var date = new Date(); //создаём объект Date()
+
+        var hour = date.getHours(); //получаем часы
+        var minute = date.getMinutes(); //получаем минуты
+        var second = date.getSeconds(); //получаем секунды
+        var day = date.getDay();
+        var month = date.getMonth();
+        var ninedate = new Date(2019, 5, 9, 23, 0, 0, 0),
+        nineday = ninedate.getDay(),
+        ninehour = ninedate.getHours(),
+        nineminute = ninedate.getMinutes(),
+        ninesecond = ninedate.getSeconds();
+        //В следующих трех строках проверяем, если число (часы, минуты, секунды) меньше 10,
+        // то выводим 0 перед числом (для красоты)
+        if (hour < 10) hour = "0" + hour;
+        if (minute < 10) minute  = "0" + minute;
+        if (second < 10) second  = "0" + second;
+        if (day < 10) day  = "0" + day;
+alert(day);
+        //Находим на странице элемент с id = siteTime и внутрь него записываем время сайта
+        document.getElementById("siteTime").innerHTML = (nineday - day ) + ":" + (ninehour - hour ) + ":" + (nineminute - minute) + ":" + (ninesecond - second);
+
+      }
+
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Расписание E3</title>
+  </head>
+  <body>
+    <div id="siteTime"></div>
+        <div class="mainheader">
+          <p>Расписание E3 2019</p>
+        </div>
+      <div class="secontmain">
+        <div class="month">
+          <p class="datamonth">9 ИЮНЯ</p>
+          <hr color= "#5b88bd" noshade size="1px">
+          <p>Microsoft</p>
+          <p class="time">23:00</p>
+        </div>
+        <div class="month">
+          <p class="datamonth">10 ИЮНЯ</p>
+          <hr color= "#5b88bd" noshade size="1px">
+          <p>Bethesda</p>
+          <p class="time">3:30</p>
+          <p>Devolver Digital</p>
+          <p class="time">5:00</p>
+          <p>PC Gaming Show</p>
+          <p class="time">20:00</p>
+          <p>Ubisoft</p>
+          <p class="time">23:00</p>
+        </div>
+        <div class="month">
+          <p class="datamonth">11 ИЮНЯ</p>
+          <hr color= "#5b88bd" noshade size="1px">
+          <p>Square Enix</p>
+          <p class="time">4:00</p>
+          <p>Nintendo</p>
+          <p class="time">19:00</p>
+        </div>
+      </div>
+
+  </body>
+</html>
