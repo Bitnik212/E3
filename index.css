@@ -1,8 +1,7 @@
 body{
-  background: #383838;
+  background:white;
   display: grid;
-  color:#dfdfdf;
- 
+  color: #5b88bd;
   padding: 0;
   margin: 0px;
 }
@@ -16,22 +15,23 @@ p{
   font-family: 'PT Sans', sans-serif;
   margin-top: 0;
   margin-bottom: 10px;
-
 }
 .mainheader{
-  background: #dfdfdf;
-  color: #383838;
-  
+  background: #5b88bd;
+  color: white;
   padding: 8px;
   margin-bottom: 0;
+
+  border-radius: 5px;
 }
 .mainheader > p{
-  margin-bottom: 2px;;
+  margin-bottom: 2px;
   margin-left: 20px;
-
 }
 hr{
   margin-bottom: 16px;
+
+
 }
 div{
   margin-bottom: 25px;
