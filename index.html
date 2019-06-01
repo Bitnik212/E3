@@ -1,45 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
-    
+
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
     <title>Расписание E3</title>
   </head>
-  <body>
-   
-        <div class="mainheader">
-          <p>Расписание E3 2019</p>
-        </div>
-      <div class="secontmain">
-        <div class="month">
+  <body onload="time()">
+      <div class="mainheader">
+        <p>Расписание E3 2019</p>
+      </div>
+      <div class="main">
+        <div class="month" >
           <p class="datamonth">9 ИЮНЯ</p>
           <hr color= "#5b88bd" noshade size="1px">
           <p>Microsoft</p>
-          <p class="time">23:00</p>
+          <div class="boxdiv">
+            <div class="time" id="nine">1</div>
+            <div class="popup">23:00</div>
+          </div>
+
         </div>
         <div class="month">
           <p class="datamonth">10 ИЮНЯ</p>
           <hr color= "#5b88bd" noshade size="1px">
           <p>Bethesda</p>
-          <p class="time">3:30</p>
+          <p class="time" id="ten1">3:30</p>
           <p>Devolver Digital</p>
-          <p class="time">5:00</p>
+          <p class="time" id="ten2">5:00</p>
           <p>PC Gaming Show</p>
-          <p class="time">20:00</p>
+          <p class="time" id="ten3">20:00</p>
           <p>Ubisoft</p>
-          <p class="time">23:00</p>
+          <p class="time" id="ten4">23:00</p>
         </div>
         <div class="month">
           <p class="datamonth">11 ИЮНЯ</p>
           <hr color= "#5b88bd" noshade size="1px">
           <p>Square Enix</p>
-          <p class="time">4:00</p>
+          <p class="time" id="elev1">4:00</p>
           <p>Nintendo</p>
-          <p class="time">19:00</p>
+          <p class="time" id="elev2">19:00</p>
         </div>
       </div>
+      <script type="text/javascript">
+        timeend = new Date(2019, 5, 9, 22, 0, 0);
+        function time() {
+          today = new Date();
+          today = Math.floor((timeend-today)/1000);
+          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+          thour=today%24; today=Math.floor(today/24);
+          timestr=today +" дней "+ thour+" часов "+tmin+" минут ";
+          document.getElementById('nine').innerHTML=timestr;
+          window.setTimeout("time()",1000);
+        }
+        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
+      </script>
+      <script type="text/javascript">
+        timeend1= new Date(2019, 5, 10, 2, 30, 0);
+        function time1() {
+          today = new Date();
+          today = Math.floor((timeend1-today)/1000);
+          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+          thour=today%24; today=Math.floor(today/24);
+          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+          document.getElementById('ten1').innerHTML=timestr;
+          window.setTimeout("time1()",1000);
+        }
+        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
+      </script>
+      <script type="text/javascript">
+        timeend2= new Date(2019, 5, 10, 4, 0, 0);
 
+        function time2() {
+          today = new Date();
+          today = Math.floor((timeend2-today)/1000);
+          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+          thour=today%24; today=Math.floor(today/24);
+          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+          document.getElementById('ten2').innerHTML=timestr;
+          window.setTimeout("time2()",1000);
+        }
+        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
+      </script>
+      <script type="text/javascript">
+        timeend3= new Date(2019, 5, 10, 19, 0, 0);
+        function time3() {
+          today = new Date();
+          today = Math.floor((timeend3-today)/1000);
+          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+          thour=today%24; today=Math.floor(today/24);
+          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+          document.getElementById('ten3').innerHTML=timestr;
+          window.setTimeout("time3()",1000);
+        }
+        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
+      </script>
+      <script type="text/javascript">
+        timeend4= new Date(2019, 5, 10, 22, 0, 0);
+        // IE и FF по разному отрабатывают getYear()
+        // timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
+        // для задания обратного отсчета до определенной даты укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
+        // Для задания даты с точностью до времени укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
+        function time4() {
+          today = new Date();
+          today = Math.floor((timeend4-today)/1000);
+          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+          thour=today%24; today=Math.floor(today/24);
+          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+          document.getElementById('ten4').innerHTML=timestr;
+          window.setTimeout("time4()",1000);
+        }
+        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
+      </script>
+      <script type="text/javascript">
+        timeend5= new Date(2019, 5, 11, 3, 0, 0);
+        // IE и FF по разному отрабатывают getYear()
+        // timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
+        // для задания обратного отсчета до определенной даты укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
+        // Для задания даты с точностью до времени укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
+        function time5() {
+          today = new Date();
+          today = Math.floor((timeend5-today)/1000);
+          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+          thour=today%24; today=Math.floor(today/24);
+          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+          document.getElementById('elev1').innerHTML=timestr;
+          window.setTimeout("time5()",1000);
+        }
+        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
+      </script>
+      <script type="text/javascript">
+        timeend6= new Date(2019, 5, 11, 18, 0, 0);
+        function time6() {
+          today = new Date();
+          today = Math.floor((timeend6-today)/1000);
+          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+          thour=today%24; today=Math.floor(today/24);
+          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+          document.getElementById('elev2').innerHTML=timestr;
+          window.setTimeout("time6()",1000);
+        }
+        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
+      </script>
   </body>
 </html>
