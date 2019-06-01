@@ -1,16 +1,23 @@
 
+
 body{
   background:#19191b;
-  background-image: url(fon.png);
-  background-position:  left;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+
 
   display: grid;
   color: white;
   padding: 0;
   margin: 0px;
 
+}
+img{
+position: absolute;
+z-index: -1;
+opacity: 0.1;
+justify-content: center;
+width: 100vw;
+height: 100vh;
 }
 .datamonth{
   font-size: 18px;
