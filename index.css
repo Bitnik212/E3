@@ -52,16 +52,22 @@ hr{
 }
 .popup{
   background: transparent;
+  border-radius: 5px;
   color: white;
   padding:10px;
-  width: 35px;
+  width: 150px;
   height: 20px;
   margin-bottom: -70px;
-  margin-left: 50px;
+  margin-left: 30px;
+  margin-top: 0px;
 
+  text-align: center;
+  font-size: 15px;
+  font-family: 'PT Sans', sans-serif;
 }
 .popup:hover{
-  background-color: rgba(91,136,189,0.5);
+  border: 1px solid #5b88bd;
+  color: #5b88bd;
 }
 
 
