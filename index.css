@@ -1,8 +1,13 @@
 
 body{
-  background:white;
+  background:#19191b;
+  background-image: url(fon.png);
+  background-position:  left;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: grid;
-  color: #5b88bd;
+  color: white;
   padding: 0;
   margin: 0px;
 
@@ -17,9 +22,10 @@ p{
   font-family: 'PT Sans', sans-serif;
   margin-top: 0;
   margin-bottom: 10px;
+  сolor:#454648;
 }
 .mainheader{
-  background: #5b88bd;
+  background: #2a2a2a;
   color: white;
   padding: 8px;
   margin-bottom: 0;
@@ -30,6 +36,7 @@ p{
 }
 hr{
   margin-bottom: 16px;
+
 }
 .month{
   margin-bottom: 30px;
@@ -42,7 +49,7 @@ hr{
 .time{
   margin-top: -30px;
   text-align: right;
-  color: #5b88bd;
+  color: white;
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
 }
@@ -53,7 +60,7 @@ hr{
 .popup{
   background: transparent;
   border-radius: 5px;
-  color: white;
+  color: #19191b;
   padding:10px;
   width: 150px;
   height: 20px;
@@ -66,8 +73,8 @@ hr{
   font-family: 'PT Sans', sans-serif;
 }
 .popup:hover{
-  border: 1px solid #5b88bd;
-  color: #5b88bd;
+  border: 1px solid white;
+  color: white;
 }
 
 
