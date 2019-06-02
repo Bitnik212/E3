@@ -1,13 +1,26 @@
-
+::selection{
+  color: #2a2a2a;
+  background: white;
+  opacity: 0.01;
+}
 
 body{
-  background:#19191b;
+  background: local #19191b url(op1fon.png) top no-repeat;
+  background-size: cover;
   display: grid;
   color: white;
   padding: 0;
   margin: 0px;
-}
 
+}
+img{
+position: absolute;
+z-index: -1;
+opacity: 0.1;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+}
 .datamonth{
   font-size: 18px;
   font-weight: 700;
@@ -76,6 +89,10 @@ hr{
 
 #nine{
   font-family: 'PT Sans', sans-serif;
-  font-weight: bold;
+  font-weight: 400;
+  display: inline-block;
 
+}
+.bold{
+  font-weight: bold;
 }
