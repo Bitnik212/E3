@@ -8,7 +8,6 @@
     <title>Расписание E3</title>
   </head>
   <body onload="time()">
-    <!--<img src="fon.png" />!-->
       <div class="mainheader">
         <p>Расписание E3 2019</p>
       </div>
@@ -45,14 +44,14 @@
         </div>
       </div>
       <script type="text/javascript">
-        timeend = new Date(2019, 5, 9, 22, 0, 0);
+        timeend = new Date(2019, 5, 9, 23, 0, 0);
         function time() {
           today = new Date();
           today = Math.floor((timeend-today)/1000);
           tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
           tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
           thour=today%24; today=Math.floor(today/24);
-          timestr=today +" дней "+ thour+" часов "+tmin+" минут ";
+          timestr="Начнется через: " + "<span class=\"bold\">" + today + "</span>"  +" дней "+ "<span class=\"bold\">" + thour+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin + "</span>" +" минут" + "; (23:00)";
           document.getElementById('nine').innerHTML=timestr;
           window.setTimeout("time()",1000);
 
@@ -60,7 +59,7 @@
         // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend1= new Date(2019, 5, 10, 2, 30, 0);
+        timeend1= new Date(2019, 5, 10, 3, 30, 0);
         function time1() {
           today = new Date();
           today = Math.floor((timeend1-today)/1000);
@@ -74,7 +73,7 @@
         // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend2= new Date(2019, 5, 10, 4, 0, 0);
+        timeend2= new Date(2019, 5, 10, 5, 0, 0);
 
         function time2() {
           today = new Date();
@@ -89,7 +88,7 @@
         // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend3= new Date(2019, 5, 10, 19, 0, 0);
+        timeend3= new Date(2019, 5, 10, 20, 0, 0);
         function time3() {
           today = new Date();
           today = Math.floor((timeend3-today)/1000);
@@ -103,7 +102,7 @@
         // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend4= new Date(2019, 5, 10, 22, 0, 0);
+        timeend4= new Date(2019, 5, 10, 23, 0, 0);
         // IE и FF по разному отрабатывают getYear()
         // timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
         // для задания обратного отсчета до определенной даты укажите дату в формате:
@@ -123,7 +122,7 @@
         // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend5= new Date(2019, 5, 11, 3, 0, 0);
+        timeend5= new Date(2019, 5, 11, 4, 0, 0);
         // IE и FF по разному отрабатывают getYear()
         // timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
         // для задания обратного отсчета до определенной даты укажите дату в формате:
@@ -143,7 +142,7 @@
         // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend6= new Date(2019, 5, 11, 18, 0, 0);
+        timeend6= new Date(2019, 5, 11, 19, 0, 0);
         function time6() {
           today = new Date();
           today = Math.floor((timeend6-today)/1000);
