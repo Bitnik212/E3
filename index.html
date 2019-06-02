@@ -15,8 +15,12 @@
         <div class="month" >
           <p class="datamonth">9 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
-          <p class="Microsoft">Microsoft</p>
-          <div class="time" id="nine">1</div>
+          <p class="Microsoft" id="onair1">Microsoft<p class="Microsoftunvisible"> в эфире</p></p>
+          <div class="boxdiv">
+            <div class="time" id="nine">1</div>
+            <a class="popup" id="popup1" href="#">Трансляция</a>
+          </div>
+
         </div>
         <div class="month">
           <p class="datamonth">10 ИЮНЯ</p>
@@ -39,7 +43,7 @@
           <p class="time" id="elev2">19:00</p>
         </div>
       </div>
-      <script type="text/javascript">
+      <script type="text/javascript"``>
         timeend = new Date(2019, 5, 9, 23, 0, 0);
         function time() {
           today = new Date();
@@ -51,6 +55,13 @@
           document.getElementById('nine').innerHTML=timestr;
           window.setTimeout("time()",1000);
 
+          var onair;
+          onair = "Microsoft<p class=\"Microsoftunvisible\">в эфире</p>";
+          if ((today = 0) && (thour = 0) && (tmin = 0)) {
+            document.getElementById('onair1').innerHTML=onair;
+            document.getElementById('onair1').innerHTML=onair;
+
+          }
         }
         // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
