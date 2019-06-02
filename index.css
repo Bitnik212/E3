@@ -3,9 +3,14 @@
   background: white;
   opacity: 0.01;
 }
+a:active, a:visited, a:link{
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
 
 body{
-  background: local #19191b url(op1fon.png) top no-repeat;
+  background: local #19191b url(op1fon.png) center no-repeat;
   background-size: cover;
   color: white;
   margin: 0px;
@@ -75,4 +80,15 @@ hr{
 #nine{
   position: relative;
   margin-left: 100px;
+}
+.bit, .uzzaw{
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  margin-left: 30px;
+  opacity: 0.7;
+}
+.bit > a, .uzzaw > a{
+  font-weight: 400;
 }
