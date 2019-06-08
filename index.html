@@ -115,7 +115,7 @@
           timestr="Начнется через: " + "<span class=\"bold\">" + today + "</span>"  +" дней "+ "<span class=\"bold\">" + thour+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin + "</span>" +" минут" + ";(23:00)";
           }
           document.getElementById('nine').innerHTML=timestr;
-          if ((today <= 0) & (thour <= -2) & (tmin <= 0)) {
+          if ((today <= 0) & (thour <= -5) & (tmin <= 0)) {
               time1();
               document.getElementById('onair0').innerHTML=endair;
               document.getElementById('onair0').style.color = "#bd5b5b";
@@ -142,7 +142,7 @@
           timestr1="Начнется через: " + "<span class=\"bold\">" + today1 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour1+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin1 + "</span>" +" минут" + ";(3:30)";
           }
           document.getElementById('ten1').innerHTML=timestr1;
-          if ((today1 <= 0) & (thour1 <= -1)) {
+          if ((today1 <= 0) & (thour1 <= -5)) {
               time2();
               document.getElementById('onair').innerHTML=endair;
               document.getElementById('onair').style.color = "#bd5b5b";
