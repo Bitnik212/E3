@@ -7,162 +7,272 @@
     <meta charset="utf-8">
     <title>Расписание E3</title>
   </head>
-  <body onload="time()">
+  <body onload="time0()">
       <div class="mainheader">
         <p>Расписание E3 2019</p>
       </div>
       <div class="main">
-        <div class="month" >
-          <p class="datamonth">9 ИЮНЯ</p>
+        <div class="month">
+          <p class="datemonth">9 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
-          <p class="Microsoft" id="onair1">Microsoft<p class="Microsoftunvisible"> в эфире</p></p>
+          <p class="comname">EA<p class="unvisible" id="onair-1"></p></p>
           <div class="boxdiv">
-            <div class="time" id="nine">1</div>
-            <a class="popup" id="popup1" href="#">Трансляция</a>
+            <div class="time" id="nine0">19:15</div>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
           </div>
-
+          <p class="comname">Microsoft<p class="unvisible" id="onair0"></p></p>
+          <div class="boxdiv">
+            <div class="time" id="nine">23:00</div>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
+          </div>
         </div>
         <div class="month">
-          <p class="datamonth">10 ИЮНЯ</p>
+          <p class="datemonth">10 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
-          <p>Bethesda</p>
-          <p class="time" id="ten1">3:30</p>
-          <p>Devolver Digital</p>
-          <p class="time" id="ten2">5:00</p>
-          <p>PC Gaming Show</p>
-          <p class="time" id="ten3">20:00</p>
-          <p>Ubisoft</p>
-          <p class="time" id="ten4">23:00</p>
+          <p class="comname">Bethesda</p>
+          <p><p class="unvisible" id="onair"></p></p>
+          <div class="boxdiv">
+            <p class="time" id="ten1">3:30</p>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
+          </div>
+          <p class="comname">Devolver Digital</p>
+          <p><p class="unvisible" id="onair1"></p></p>
+          <div class="boxdiv">
+            <p class="time" id="ten2">5:00</p>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
+          </div>
+          <p class="comname">PC Gaming Show</p>
+          <p><p class="unvisible" id="onair2"></p></p>
+          <div class="boxdiv">
+            <p class="time" id="ten3">20:00</p>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
+          </div>
+          <p class="comname">Ubisoft</p>
+          <p  ><p class="unvisible" id="onair3"></p></p>
+          <div class="boxdiv">
+            <p class="time" id="ten4">23:00</p>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
+          </div>
         </div>
         <div class="month">
-          <p class="datamonth">11 ИЮНЯ</p>
+          <p class="datemonth">11 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
-          <p>Square Enix</p>
-          <p class="time" id="elev1">4:00</p>
-          <p>Nintendo</p>
-          <p class="time" id="elev2">19:00</p>
+          <p class="comname">Square Enix</p>
+          <p  ><p class="unvisible" id="onair4"></p></p>
+          <div class="boxdiv">
+            <p class="time" id="elev1">4:00</p>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
+          </div>
+          <p class="comname">Nintendo</p>
+          <p  ><p class="unvisible" id="onair5"></p></p>
+          <div class="boxdiv">
+            <p class="time" id="elev2">19:00</p>
+            <a class="popup" id="popup1" href="#">Трансляция ></a>
+          </div>
         </div>
       </div>
-      <script type="text/javascript"``>
-        timeend = new Date(2019, 5, 9, 23, 0, 0);
+      <script type="text/javascript">
+        var onair = "в эфире",
+        endair = "Завершено",
+        day1 = "день",
+        day5 = "дней",
+        day2 = "дня",
+        hour1 = "час",
+        hour2 = "часа",
+        hour5 = "часов",
+        minutes1 = "минута",
+        minutes2 = "минуты",
+        minutes5 = "минут",
+        day, hour, minutes;
+        timeend0 = new Date(2019, 5, 9, 19, 15, 0);//2019, 5, 9, 19, 15, 0
+        function time0() {
+          today0 = new Date();
+          today0 = Math.floor((timeend0-today0)/1000);
+          tsec0=today0%60; today0=Math.floor(today0/60); if(tsec0<10)tsec0='0'+tsec0;
+          tmin0=today0%60; today0=Math.floor(today0/60); if(tmin0<10)tmin0='0'+tmin0;
+          thour0=today0%24; today0=Math.floor(today0/24);
+          if ((today0 <= 0) & (thour0 <= 0) & (tmin0 <= 0)) {
+            timestr0="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:15)";
+            document.getElementById('onair-1').innerHTML=onair;
+          } else {
+          timestr0="Начнется через: " + "<span class=\"bold\">" + day + "</span>"  +" дней "+ "<span class=\"bold\">" + hour + "</span>" +" часов "+ "<span class=\"bold\">" + minutes + "</span>" +" минут" + ";(19:15)";
+          }
+          document.getElementById('nine0').innerHTML=timestr0;
+          if ((today0 <= 0) & (thour0 <= -1) & (tmin0 <= 0)) {
+              time();
+              document.getElementById('onair-1').innerHTML=endair;
+              document.getElementById('onair-1').style.color = "#bd5b5b";
+          }
+          window.setTimeout("time0()",1000);
+          /*switch (today) {
+            case ;
+
+          }*/
+        }
+      </script>
+      <script type="text/javascript">
+        timeend = new Date(2019, 5, 9, 23, 0, 0);//2019, 5, 9, 23, 0, 0
         function time() {
           today = new Date();
           today = Math.floor((timeend-today)/1000);
           tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
           tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
           thour=today%24; today=Math.floor(today/24);
-          timestr="Начнется через: " + "<span class=\"bold\">" + today + "</span>"  +" дней "+ "<span class=\"bold\">" + thour+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin + "</span>" +" минут" + "; (23:00)";
-          document.getElementById('nine').innerHTML=timestr;
-          window.setTimeout("time()",1000);
-
-          var onair;
-          onair = "Microsoft<p class=\"Microsoftunvisible\">в эфире</p>";
-          if ((today = 0) && (thour = 0) && (tmin = 0)) {
-            document.getElementById('onair1').innerHTML=onair;
-            document.getElementById('onair1').innerHTML=onair;
-
+          if ((today <= 0) & (thour <= 0) & (tmin <= 0)) {
+            timestr="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(23:00)";
+            document.getElementById('onair0').innerHTML=onair;
+          } else {
+          timestr="Начнется через: " + "<span class=\"bold\">" + today + "</span>"  +" дней "+ "<span class=\"bold\">" + thour+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin + "</span>" +" минут" + ";(23:00)";
           }
+          document.getElementById('nine').innerHTML=timestr;
+          if ((today <= 0) & (thour <= -1) & (tmin <= 0)) {
+              time1();
+              document.getElementById('onair0').innerHTML=endair;
+              document.getElementById('onair0').style.color = "#bd5b5b";
+          }
+          window.setTimeout("time()",1000);
         }
-        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend1= new Date(2019, 5, 10, 3, 30, 0);
+        timeend1 = new Date(2019, 5, 10, 3, 30);//2019, 5, 10, 3, 30
         function time1() {
-          today = new Date();
-          today = Math.floor((timeend1-today)/1000);
-          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
-          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
-          thour=today%24; today=Math.floor(today/24);
-          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
-          document.getElementById('ten1').innerHTML=timestr;
+          today1 = new Date(2019, 5, 10, 4, 30);
+          today1 = Math.floor((timeend1-today1)/1000);
+          tsec1=today1%60; today1=Math.floor(today1/60); if(tsec1<10)tsec1='0'+tsec1;
+          tmin1=today1%60; today1=Math.floor(today1/60); if(tmin1<10)tmin1='0'+tmin1;
+          thour1=today1%24; today1=Math.floor(today1/24);
+          if ((today1 <= 0) & (thour1 <= 0) & (tmin1 <= 0)) {
+            timestr1="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(3:30)";
+            document.getElementById('onair').innerHTML=onair;
+          } else {
+          timestr1="Начнется через: " + "<span class=\"bold\">" + today1 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour1+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin1 + "</span>" +" минут" + ";(3:30)";
+          }
+          document.getElementById('ten1').innerHTML=timestr1;
+          if ((today1 <= 0) & (thour1 <= -1)) {
+              time2();
+              document.getElementById('onair').innerHTML=endair;
+              document.getElementById('onair').style.color = "#bd5b5b";
+          }
           window.setTimeout("time1()",1000);
         }
-        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
-        timeend2= new Date(2019, 5, 10, 5, 0, 0);
-
+        timeend2 = new Date(2019, 5, 10, 5, 0, 0);//2019, 5, 10, 5, 0, 0
         function time2() {
-          today = new Date();
-          today = Math.floor((timeend2-today)/1000);
-          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
-          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
-          thour=today%24; today=Math.floor(today/24);
-          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
-          document.getElementById('ten2').innerHTML=timestr;
-          window.setTimeout("time2()",1000);
+          today2 = new Date(2019, 5, 10, 6, 0, 0);
+          today2 = Math.floor((timeend2-today2)/1000);
+          tsec2=today2%60; today2=Math.floor(today2/60); if(tsec2<10)tsec2='0'+tsec2;
+          tmin2=today2%60; today2=Math.floor(today2/60); if(tmin2<10)tmin2='0'+tmin2;
+          thour2=today2%24; today2=Math.floor(today2/24);
+          if ((today2 <= 0) & (thour2 <= 0) & (tmin2 <= 0)) {
+            timestr2="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(5:00)";
+            document.getElementById('onair1').innerHTML=onair;
+          } else {
+          timestr2="Начнется через: " + "<span class=\"bold\">" + today2 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour2+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin2 + "</span>" +" минут" + ";(5:00)";
+          }
+          document.getElementById('ten2').innerHTML=timestr2;
+          if ((today2 <= 0) & (thour2 <= -1) & (tmin2 <= 0)) {
+              time3();
+              document.getElementById('onair1').innerHTML=endair;
+              document.getElementById('onair1').style.color = "#bd5b5b";
+          }
         }
-        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
         timeend3= new Date(2019, 5, 10, 20, 0, 0);
         function time3() {
-          today = new Date();
-          today = Math.floor((timeend3-today)/1000);
-          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
-          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
-          thour=today%24; today=Math.floor(today/24);
-          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
-          document.getElementById('ten3').innerHTML=timestr;
+          today3 = new Date(2019, 5, 10, 21, 0, 0);
+          today3 = Math.floor((timeend3-today3)/1000);
+          tsec3=today3%60; today3=Math.floor(today3/60); if(tsec3<10)tsec3='0'+tsec3;
+          tmin3=today3%60; today3=Math.floor(today3/60); if(tmin3<10)tmin3='0'+tmin3;
+          thour3=today3%24; today3=Math.floor(today3/24);
+          if ((today3 <= 0) & (thour3 <= 0) & (tmin3 <= 0)) {
+            timestr3="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(20:00)";
+            document.getElementById('onair2').innerHTML=onair;
+          } else {
+          timestr3="Начнется через: " + "<span class=\"bold\">" + today3 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour3+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin3 + "</span>" +" минут" + ";(20:00)";
+          }
+          document.getElementById('ten3').innerHTML=timestr3;
+          //
+          if ((today3 <= 0) & (thour3 <= -1) & (tmin3 <= 0)) {
+              time4();
+              document.getElementById('onair2').innerHTML=endair;
+              document.getElementById('onair2').style.color = "#bd5b5b";
+          }
           window.setTimeout("time3()",1000);
         }
-        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
         timeend4= new Date(2019, 5, 10, 23, 0, 0);
-        // IE и FF по разному отрабатывают getYear()
-        // timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
-        // для задания обратного отсчета до определенной даты укажите дату в формате:
-        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
-        // Для задания даты с точностью до времени укажите дату в формате:
-        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
         function time4() {
-          today = new Date();
-          today = Math.floor((timeend4-today)/1000);
-          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
-          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
-          thour=today%24; today=Math.floor(today/24);
-          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
-          document.getElementById('ten4').innerHTML=timestr;
+          today4 = new Date(2019, 5, 10, 24, 0, 0);
+          today4 = Math.floor((timeend4-today4)/1000);
+          tsec4=today4%60; today4=Math.floor(today4/60); if(tsec4<10)tsec4='0'+tsec4;
+          tmin4=today4%60; today4=Math.floor(today4/60); if(tmin3<10)tmin4='0'+tmin4;
+          thour4=today4%24; today4=Math.floor(today4/24);
+          if ((today4 <= 0) & (thour4 <= 0) & (tmin4 <= 0)) {
+            timestr4="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(23:00)";
+            document.getElementById('onair3').innerHTML=onair;
+          } else {
+          timestr4="Начнется через: " + "<span class=\"bold\">" + today4 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour4+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin4 + "</span>" +" минут" + ";(23:00)";
+          }
+          document.getElementById('ten4').innerHTML=timestr4;
+          //
+          if ((today4 <= 0) & (thour4 <= -1) & (tmin4 <= 0)) {
+              time5();
+              document.getElementById('onair3').innerHTML=endair;
+              document.getElementById('onair3').style.color = "#bd5b5b";
+          }
           window.setTimeout("time4()",1000);
         }
-        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
         timeend5= new Date(2019, 5, 11, 4, 0, 0);
-        // IE и FF по разному отрабатывают getYear()
-        // timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
-        // для задания обратного отсчета до определенной даты укажите дату в формате:
-        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
-        // Для задания даты с точностью до времени укажите дату в формате:
-        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
         function time5() {
-          today = new Date();
-          today = Math.floor((timeend5-today)/1000);
-          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
-          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
-          thour=today%24; today=Math.floor(today/24);
-          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
-          document.getElementById('elev1').innerHTML=timestr;
+          today5 = new Date(2019, 5, 11, 5, 0, 0);
+          today5 = Math.floor((timeend5-today5)/1000);
+          tsec5=today5%60; today5=Math.floor(today5/60); if(tsec5<10)tsec5='0'+tsec5;
+          tmin5=today5%60; today5=Math.floor(today5/60); if(tmin5<10)tmin5='0'+tmin5;
+          thour5=today5%24; today5=Math.floor(today5/24);
+          if ((today5 <= 0) & (thour5 <= 0) & (tmin5 <= 0)) {
+            timestr5="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(4:00)";
+            document.getElementById('onair4').innerHTML=onair;
+          } else {
+          timestr5="Начнется через: " + "<span class=\"bold\">" + today5 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour5+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin5 + "</span>" +" минут" + ";(4:00)";
+          }
+          document.getElementById('elev1').innerHTML=timestr5;
+          //
+          if ((today5 <= 0) & (thour5 <= -1) & (tmin5 <= 0)) {
+              time6();
+              document.getElementById('onair4').innerHTML=endair;
+              document.getElementById('onair4').style.color = "#bd5b5b";
+          }
           window.setTimeout("time5()",1000);
         }
-        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
       <script type="text/javascript">
         timeend6= new Date(2019, 5, 11, 19, 0, 0);
         function time6() {
-          today = new Date();
-          today = Math.floor((timeend6-today)/1000);
-          tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
-          tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
-          thour=today%24; today=Math.floor(today/24);
-          timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
-          document.getElementById('elev2').innerHTML=timestr;
+          today6 = new Date(2019, 5, 11, 20, 0, 0);
+          today6 = Math.floor((timeend6-today6)/1000);
+          tsec6=today6%60; today6=Math.floor(today6/60); if(tsec6<10)tsec6='0'+tsec6;
+          tmin6=today6%60; today6=Math.floor(today6/60); if(tmin6<10)tmin6='0'+tmin6;
+          thour6=today6%24; today6=Math.floor(today6/24);
+          if ((today6 <= 0) & (thour6 <= 0) & (tmin6 <= 0)) {
+            timestr6="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:00)";
+            document.getElementById('onair5').innerHTML=onair;
+          } else {
+          timestr6="Начнется через: " + "<span class=\"bold\">" + today6 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour6+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin6 + "</span>" +" минут" + ";(19:00)";
+          }
+          document.getElementById('elev2').innerHTML=timestr6;
+          if ((today6 <= 0) & (thour6 <= -1) & (tmin6 <= 0)) {
+              document.getElementById('onair5').innerHTML=endair;
+              document.getElementById('onair5').style.color = "#bd5b5b";
+          }
           window.setTimeout("time6()",1000);
         }
-        // скрипт с сайта https://htmlweb.ru/java/example/timer.php
       </script>
-      <div class="bit">
+     <div class="bit">
         Programmed by <a href="https://github.com/Bitnik212/E3" target="_blank">Bit</a>
       </div>
       <div class="uzzaw">
