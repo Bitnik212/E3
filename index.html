@@ -85,7 +85,7 @@
           tsec0=today0%60; today0=Math.floor(today0/60); if(tsec0<10)tsec0='0'+tsec0;
           tmin0=today0%60; today0=Math.floor(today0/60); if(tmin0<10)tmin0='0'+tmin0;
           thour0=today0%24; today0=Math.floor(today0/24);
-          if ((today0 <= 0) & (thour0 <= 0) & (tmin0 < 0)) {
+          if ((today0 <= 0) & (thour0 <= 0) & (tmin0 <= 0)) {
             timestr0="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:15)";
             document.getElementById('onair-1').innerHTML=onair;
           } else {
