@@ -82,20 +82,17 @@
         function time0() {
           today0 = new Date();
           today0 = Math.floor((timeend0-today0)/1000);
-          tsec0=today0%60; today0=Math.floor(today0/60); if(tsec0<10)tsec0='0'+tsec0;
-          tmin0=today0%60; today0=Math.floor(today0/60); if(tmin0<10)tmin0='0'+tmin0;
+          tsec0=today0%60; today0=Math.floor(today0/60);// if(tsec0<10)tsec0='0'+tsec0;
+          tmin0=today0%60; today0=Math.floor(today0/60);// if(tmin0<10)tmin0='0'+tmin0;
           thour0=today0%24; today0=Math.floor(today0/24);
           if ((today0 <= 0) & (thour0 <= 0) & (tmin0 == 0)) {
             timestr0="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:15)";
             document.getElementById('onair-1').innerHTML=onair;
-          } else if ((today0 > 0) & (thour0 > 0) & (tmin0 > 0)) {
-          timestr0="Начнется через: " + "<span class=\"bold\">" + today0 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour0+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin0 + "</span>" +" минут" + ";(19:15)";
           } else {
-          timestr0="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:15)";
-          document.getElementById('onair-1').innerHTML=onair;
-        }
+          timestr0="Начнется через: " + "<span class=\"bold\">" + today0 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour0+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin0 + "</span>" +" минут" + ";(19:15)";
+          } 
           document.getElementById('nine0').innerHTML=timestr0;
-          if ((today0 <= 0) & (thour0 <= -1) & (tmin0 <= 0)) {
+          if ((today0 <= 0) & (thour0 < -1) & (tmin0 <= 0)) {
               time();
               document.getElementById('onair-1').innerHTML=endair;
               document.getElementById('onair-1').style.color = "#bd5b5b";
