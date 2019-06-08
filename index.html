@@ -88,9 +88,12 @@
           if ((today0 <= 0) & (thour0 <= 0) & (tmin0 == 0)) {
             timestr0="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:15)";
             document.getElementById('onair-1').innerHTML=onair;
-          } else {
+          } else if ((today0 > 0) & (thour0 > 0) & (tmin0 > 0)) {
           timestr0="Начнется через: " + "<span class=\"bold\">" + today0 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour0+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin0 + "</span>" +" минут" + ";(19:15)";
-          }
+          } else {
+          timestr0="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:15)";
+          document.getElementById('onair-1').innerHTML=onair;
+        }
           document.getElementById('nine0').innerHTML=timestr0;
           if ((today0 <= 0) & (thour0 <= -1) & (tmin0 <= 0)) {
               time();
