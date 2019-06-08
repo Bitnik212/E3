@@ -13,13 +13,17 @@
       </div>
       <div class="main">
         <div class="month">
-          <p class="datemonth">9 ИЮНЯ</p>
+          <p class="datemonth">8 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
           <p class="comname">EA<p class="unvisible" id="onair-1"></p></p>
           <div class="boxdiv">
             <div class="time" id="nine0">19:15</div>
-            <a class="popup" id="popup1" href="#">Трансляция ></a>
+            <a class="popup" id="popup1" href="https://www.twitch.tv/ea">Трансляция ></a>
           </div>
+        </div>
+        <div class="month">
+          <p class="datemonth">9 ИЮНЯ</p>
+          <hr color= "#454648" noshade size="1px">
           <p class="comname">Microsoft<p class="unvisible" id="onair0"></p></p>
           <div class="boxdiv">
             <div class="time" id="nine">23:00</div>
@@ -95,7 +99,7 @@
             timestr0="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(19:15)";
             document.getElementById('onair-1').innerHTML=onair;
           } else {
-          timestr0="Начнется через: " + "<span class=\"bold\">" + today0 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour0 + "</span>" +" часов "+ "<span class=\"bold\">" + tmin0 + "</span>" +" минут" + ";(19:15)";
+          timestr0="Начнется через: " + "<span class=\"bold\">" + today0 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour0+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin0 + "</span>" +" минут" + ";(19:15)";
           }
           document.getElementById('nine0').innerHTML=timestr0;
           if ((today0 <= 0) & (thour0 <= -1) & (tmin0 <= 0)) {
@@ -104,10 +108,6 @@
               document.getElementById('onair-1').style.color = "#bd5b5b";
           }
           window.setTimeout("time0()",1000);
-          /*switch (today) {
-            case ;
-
-          }*/
         }
       </script>
       <script type="text/javascript">
@@ -131,6 +131,10 @@
               document.getElementById('onair0').style.color = "#bd5b5b";
           }
           window.setTimeout("time()",1000);
+          /*switch (today) {
+            case ;
+
+          }*/
         }
       </script>
       <script type="text/javascript">
