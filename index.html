@@ -127,8 +127,8 @@
         function time1() {
           today1 = new Date();
           today1 = Math.floor((timeend1-today1)/1000);
-          tsec1=today1%60; today1=Math.floor(today1/60); if(tsec1<10)tsec1='0'+tsec1;
-          tmin1=today1%60; today1=Math.floor(today1/60); if(tmin1<10)tmin1='0'+tmin1;
+          tsec1=today1%60; today1=Math.floor(today1/60);
+          tmin1=today1%60; today1=Math.floor(today1/60); 
           thour1=today1%24; today1=Math.floor(today1/24);
           if ((today1 <= 0) & (thour1 <= 0) & (tmin1 <= 0)) {
             timestr1="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(3:30)";
@@ -137,12 +137,11 @@
           timestr1="Начнется через: " + "<span class=\"bold\">" + today1 + "</span>"  +" дней "+ "<span class=\"bold\">" + thour1+ "</span>" +" часов "+ "<span class=\"bold\">" +tmin1 + "</span>" +" минут" + ";(3:30)";
           }
           document.getElementById('ten1').innerHTML=timestr1;
-          if ((today1 <= 0) & (thour1 <= -5)) {
+          if ((today1 <= 0) & (thour1 <= -5) & (tmin <= 0)) {
               time2();
               document.getElementById('onair').innerHTML=endair;
               document.getElementById('onair').style.color = "#bd5b5b";
-          }
-          window.setTimeout("time1()",1000);
+          }         
         }
       </script>
       <script type="text/javascript">
