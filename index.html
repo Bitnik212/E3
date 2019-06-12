@@ -15,7 +15,7 @@
         <div class="month">
           <p class="datemonth">8 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
-          <p class="comname">EA<p class="unvisible" id="onair-1"></p></p>
+          <p class="comname">EA<p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <div class="time" id="nine0">19:15</div>
             <a class="popup" id="popup1" href="https://www.twitch.tv/ea" target="_blank">Трансляция ></a>
@@ -24,7 +24,7 @@
         <div class="month">
           <p class="datemonth">9 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
-          <p class="comname">Microsoft<p class="unvisible" id="onair0"></p></p>
+          <p class="comname">Microsoft<p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <div class="time" id="nine">23:00</div>
             <a class="popup" id="popup1" href="https://www.twitch.tv/xbox" target="_blank">Трансляция ></a>
@@ -34,25 +34,25 @@
           <p class="datemonth">10 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
           <p class="comname">Bethesda</p>
-          <p><p class="unvisible" id="onair"></p></p>
+          <p><p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <p class="time" id="ten1">3:30</p>
             <a class="popup" id="popup1" href="https://www.twitch.tv/bethesda" target="_blank">Трансляция ></a>
           </div>
           <p class="comname">Devolver Digital</p>
-          <p><p class="unvisible" id="onair1"></p></p>
+          <p><p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <p class="time" id="ten2">5:00</p>
             <a class="popup" id="popup1" href="https://www.twitch.tv/devolverdigital" target="_blank">Трансляция ></a>
           </div>
           <p class="comname">PC Gaming Show</p>
-          <p><p class="unvisible" id="onair2"></p></p>
+          <p><p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <p class="time" id="ten3">20:00</p>
             <a class="popup" id="popup1" href="https://www.twitch.tv/pcgamer" target="_blank">Трансляция ></a>
           </div>
           <p class="comname">Ubisoft</p>
-          <p  ><p class="unvisible" id="onair3"></p></p>
+          <p  ><p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <p class="time" id="ten4">23:00</p>
             <a class="popup" id="popup1" href="https://www.twitch.tv/ubisoft" target="_blank">Трансляция ></a>
@@ -62,19 +62,20 @@
           <p class="datemonth">11 ИЮНЯ</p>
           <hr color= "#454648" noshade size="1px">
           <p class="comname">Square Enix</p>
-          <p  ><p class="unvisible" id="onair4"></p></p>
+          <p  ><p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <p class="time" id="elev1">4:00</p>
             <a class="popup" id="popup1" href="https://www.twitch.tv/squareenix" target="_blank">Трансляция ></a>
           </div>
           <p class="comname">Nintendo</p>
-          <p  ><p class="unvisible" id="onair5"></p></p>
+          <p  ><p class="unvisible" id="onair-1" style="color:#bd5b5b;">Завершено</p></p>
           <div class="boxdiv">
             <p class="time" id="elev2">19:00</p>
             <a class="popup" id="popup1" href="https://www.twitch.tv/nintendo" target="_blank">Трансляция ></a>
           </div>
         </div>
       </div>
+      <!--
      <script type="text/javascript">
         function days(dayv) {
           if ((dayv % 10 == 1) & (dayv % 10 !== 11)) { //дни
@@ -192,7 +193,7 @@
             timestr1="Начнется через: " + "<span class=\"bold\">" + today1 + "</span>"  +day1+ "<span class=\"bold\">" + thour1+ "</span>" +hour1+ "<span class=\"bold\">" +tmin1 + "</span>" +minutes1 + ";(3:30)";
           }
           document.getElementById('ten1').innerHTML=timestr1;
-          if ((today1 <= 0) & (thour1 <= -2) & (tmin1 <= 0)) {
+          if ((today1 <= 0) & (thour1 <= -3) & (tmin1 <= 0)) {
               document.getElementById('onair').innerHTML=endair;
               document.getElementById('onair').style.color = "#bd5b5b";
               time2();
@@ -216,7 +217,7 @@
           timestr2="Начнется через: " + "<span class=\"bold\">" + today2 + "</span>"  +day2+ "<span class=\"bold\">" + thour2+ "</span>" +hour2+ "<span class=\"bold\">" +tmin2 + "</span>" +minutes2 + ";(5:00)";
           }
           document.getElementById('ten2').innerHTML=timestr2;
-          if ((today2 <= 0) & (thour2 <= -4) & (tmin2 <= 0)) {
+          if ((today2 <= 0) & (thour2 <= -3) & (tmin2 <= 0)) {
               time3();
               document.getElementById('onair1').innerHTML=endair;
               document.getElementById('onair1').style.color = "#bd5b5b";
@@ -227,7 +228,7 @@
         timeend3= new Date(2019, 5, 10, 20, 0, 0);
         function time3() {
           var day3, hour3, minutes3,
-          today3 = new Date();
+          today3 = new Date(2019, 5, 10, 23, 0, 0);
           today3 = Math.floor((timeend3-today3)/1000);
           tsec3=today3%60; today3=Math.floor(today3/60);
           tmin3=today3%60; today3=Math.floor(today3/60);
@@ -236,22 +237,21 @@
           if ((today3 <= 0) & (thour3 <= 0) & (tmin3 <= 0)) {
             timestr3="Начнется через: <span class=\"bold\">0</span> дней <span class=\"bold\">0</span> часов <span class=\"bold\">0</span>" +" минут" + ";(20:00)";
             document.getElementById('onair2').innerHTML=onair;
-          } else {
-          timestr3="Начнется через: " + "<span class=\"bold\">" + today3 + "</span>"  +day3+ "<span class=\"bold\">" + thour3+ "</span>" +hour3+ "<span class=\"bold\">" +tmin3 + "</span>" +minutes3 + ";(20:00)";
           }
           document.getElementById('ten3').innerHTML=timestr3;
-          if ((today3 <= 0) & (thour3 <= -4) & (tmin3 <= 0)) {
-              time4();
-              document.getElementById('onair2').innerHTML=endair;
-              document.getElementById('onair2').style.color = "#bd5b5b";
+          if ((today3 <= 0) & (thour3 <= -3) & (tmin3 <= 0)) {
+
           }
         }
+        time4();
+        document.getElementById('onair2').innerHTML=endair;
+        document.getElementById('onair2').style.color = "#bd5b5b";
       </script>
       <script type="text/javascript">
         timeend4= new Date(2019, 5, 10, 23, 0, 0);
         function time4() {
           var day4, hour4, minutes4,
-          today4 = new Date();
+          today4 = new Date(2019, 5, 11, 3, 0, 0);
           today4 = Math.floor((timeend4-today4)/1000);
           tsec4=today4%60; today4=Math.floor(today4/60);
           tmin4=today4%60; today4=Math.floor(today4/60);
@@ -264,18 +264,20 @@
           timestr4="Начнется через: " + "<span class=\"bold\">" + today4 + "</span>"  +day4+ "<span class=\"bold\">" + thour4+ "</span>" +hour4+ "<span class=\"bold\">" +tmin4 + "</span>" +minutes4 + ";(23:00)";
           }
           document.getElementById('ten4').innerHTML=timestr4;
-          if ((today4 <= 0) & (thour4 <= -4) & (tmin4 <= 0)) {
-              time5();
-              document.getElementById('onair3').innerHTML=endair;
-              document.getElementById('onair3').style.color = "#bd5b5b";
+          if ((today4 <= 0) & (thour4 <= -3) & (tmin4 <= 0)) {
+
           }
+
         }
+        time5();
+        document.getElementById('onair3').innerHTML=endair;
+        document.getElementById('onair3').style.color = "#bd5b5b";
       </script>
       <script type="text/javascript">
         timeend5= new Date(2019, 5, 11, 4, 0, 0);
         function time5() {
           var day5, hour5, minutes5,
-          today5 = new Date();
+          today5 = new Date(2019, 5, 11, 7, 0, 0);
           today5 = Math.floor((timeend5-today5)/1000);
           tsec5=today5%60; today5=Math.floor(today5/60);
           tmin5=today5%60; today5=Math.floor(today5/60);
@@ -289,12 +291,13 @@
           }
           document.getElementById('elev1').innerHTML=timestr5;
           if ((today5 <= 0) & (thour5 <= -3) & (tmin5 <= 0)) {
-              time6();
-              document.getElementById('onair4').innerHTML=endair;
-              document.getElementById('onair4').style.color = "#bd5b5b";
+
           }
-          window.setTimeout("time5()",1000);
+
         }
+        time6();
+        document.getElementById('onair4').innerHTML=endair;
+        document.getElementById('onair4').style.color = "#bd5b5b";
       </script>
       <script type="text/javascript">
         timeend6= new Date(2019, 5, 11, 19, 0, 0);
@@ -317,8 +320,13 @@
               document.getElementById('onair5').innerHTML=endair;
               document.getElementById('onair5').style.color = "#bd5b5b";
           }
+          if ((today6 <= 0) & (thour6 <= -3) & (tmin6 <= 0)) {
+            document.getElementById('onair5').innerHTML=endair;
+            document.getElementById('onair5').style.color = "#bd5b5b";
+            break;
+          }
         }
-      </script>
+      </script>!-->
      <div class="bit">
         Programmed by <a href="https://github.com/Bitnik212/E3" target="_blank">Bit</a>
       </div>
